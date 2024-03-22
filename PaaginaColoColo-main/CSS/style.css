@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+nav{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-size: 30px;
+
+    color: gold;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+/*--- header--*/
+header{
+    /*background-color: black;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    /*flex*/
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav{
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    
+}
+header nav li{
+    margin: 10px;
+}
+
+/*responsive*/
+@media(max-width: 1000px){
+    header{
+        padding: 20px 50px;
+    }
+}
+@media(max-width: 700px){
+    header{
+        flex-direction: column;
+    }
+    header nav li a{
+        font-size: 25px;
+    }
+}
+
+section {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+@media(max-width:1000px) {
+    section {
+        padding: 100px 50px;
+    }
+}
+
+@media(max-width:600px) {
+    section {
+        padding: 130px 30px;
+    }
+}
+
+/*banner*/
+.banner{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    min-height: 80vh;
+}
+
+.banner .banner-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("../IMG/fondo\ estadio.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+}
+
+.banner .banner-img::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    content: '';
+}
+
+.banner h1{
+    margin-top: 10%;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.banner h2{
+    margin-bottom: 20px;
+    font-size: 60px;
+}
+
+.banner a.banner-btn{
+    text-transform: uppercase;
+    background-color: black;
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+
+@media(max-width:600px) {
+    .banner h1 {
+        margin-top: 90%;
+        margin-bottom: 10px;
+        font-size: 50px;
+    }
+
+    .banner h2 {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .banner a.banner-btn {
+        text-transform: uppercase;
+        background: black;
+        font-size: 15px;
+        padding: 15px 30px;
+        border-radius: 50px;
+    }
+}
+
+/*HISTORIA*/
+.historia-container{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.historia-titulo{
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+.historia-container li{
+    padding: 20px;
+    height: 300px;
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+}
+
+.historia-izq{
+    background-image: url("../IMG/historia.jpg");
+    flex-basis: 40%;
+}
+
+.historia-der{
+    flex-basis: 60%;
+}
+
+.historia-container p{
+    text-align: justify;
+    margin-bottom: 35px;
+    padding-left: 0;
+}
+
+.historia-container .historia-der h2{
+    margin-bottom: 20px;
+}
+
+.historia-container .historia-der .historia-btn{
+    text-transform: uppercase;
+    background-color: black;
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+
+@media(max-width: 600px){
+    .historia-izq, .historia-der{
+        flex-basis: 100%;
+    }
+
+    .historia-container .historia-der{
+        text-align: center;
+        margin-bottom: 100px;
+    }
+}
+
+/*TITULOS*/
+.titulos{
+    background-color: black;
+}
+.titulos-container{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.titulos-titulo{
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 5%;
+    color: white;
+}
+.titulos-container .titulos-nacionales{
+    flex-basis: 30%;
+    padding: 0 30px;
+    text-align: center;
+    color: gold;
+}
+.titulos-container .titulos-internacionales{
+    flex-basis: 30%;
+    padding: 0 30px;
+    text-align: center;
+    color: gold;
+}
+.titulos-container .titulos-record{
+    background-image: url("../IMG/icono\ colo\ colo.png");
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+    flex-basis: 33%;
+}
+.titulos-container li h4{
+    margin-bottom: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+@media(max-width:600px) {
+    .titulos-container li {
+        flex-basis: 100%;
+        margin-bottom: 60px;
+    }
+
+    .titulos-container li p {
+        text-align: justify;
+    }
+
+}
+
+/*JUGADORES*/
+.jugadores-container{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.jugadores-titulo{
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+.jugadores-container li{
+    padding: 20px;
+    height: 300px;
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+}
+
+.jugadores-izq{
+    flex-basis: 40%;
+}
+
+.jugadores-der{
+    background-image: url("../IMG/plantel.jpeg");
+    flex-basis: 60%;
+    
+}
+
+.jugadores-container p{
+    text-align: justify;
+    margin-bottom: 35px;
+    padding-left: 0;
+}
+
+.jugadores-container h2{
+    text-align: justify;
+    margin-bottom: 35px;
+    padding-left: 100;
+}
+
+
+.jugadores-container .jugadores-izq h2{
+    margin-bottom: 20px;
+}
+
+.jugadores-container .jugadores-izq .jugadores-btn{
+    text-transform: uppercase;
+    background-color: black;
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+
+@media(max-width: 600px){
+    .jugadores-izq, .jugadores-der{
+        flex-basis: 100%;
+    }
+
+    .jugadores-container .jugadores-der{
+        text-align: center;
+        margin-bottom: 100px;
+    }
+}
